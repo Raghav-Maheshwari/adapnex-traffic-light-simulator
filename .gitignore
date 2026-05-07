@@ -1,0 +1,8 @@
+# Adapnex / CMake build output
+build_*/
+
+# Editor / OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
