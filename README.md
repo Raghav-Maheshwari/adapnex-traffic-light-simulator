@@ -4,7 +4,7 @@ A traffic light simulator built with the [Adapnex SDK](https://docs.adapnex.com/
 
 ## Demo
 
-_(screen recording of the WAGO simulator goes here)_
+https://github.com/user-attachments/assets/978f203a-960a-42e4-9906-98b88d4694d0
 
 ## Hardware mapping
 
