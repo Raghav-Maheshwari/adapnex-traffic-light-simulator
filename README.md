@@ -97,10 +97,8 @@ The compiled executable lands at `build_wago_cc100_simulator/traffic_lights`. Bu
 
 ### Run on the simulator
 
-Replace `<device>` with the simulator name from `adapnex device list`:
-
 ```sh
-adapnex app run <device> ./build_wago_cc100_simulator/traffic_lights
+./build_wago_cc100_simulator/traffic_lights
 ```
 
 This deploys the binary and attaches to its output. Once it's running:
@@ -109,8 +107,6 @@ This deploys the binary and attaches to its output. Once it's running:
 - Press **DI2** to queue a pedestrian crossing.
 - Watch **DO1–DO4** for the four traffic lights.
 
-Detach without stopping the app with `Ctrl+C`; reattach later with `adapnex app attach <device>`. Stop the app with `adapnex app stop <device>`.
-
 ### Tests
 
 Tests run on the host (no device needed) using the SDK's `Simulation` fixture:
@@ -118,12 +114,3 @@ Tests run on the host (no device needed) using the SDK's `Simulation` fixture:
 ```sh
 adapnex test
 ```
-
-Covers:
-
-- System stays off when `main_switch` is low.
-- `main_switch` rising edge boots into the NorthSouth phase.
-- `main_switch` falling edge clears every output.
-- NorthSouth → EastWest after 10s.
-- Pedestrian press queues flashing; all four lights blink together.
-- After the flash, the system resumes EastWest (or whatever was queued next).
